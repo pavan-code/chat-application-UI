@@ -1,0 +1,31 @@
+<div id="alice">
+    <mat-card class="container">
+        <mat-card-header>
+            <img mat-card-avatar src="../../assets/images/alice.jpg" alt="">
+            <div matLine>
+                <h1>Alice</h1>
+            </div>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="messages scrollbar scrollbar-default" #scrollframe>
+            <p class="heading">Messages to this chat are now secured with end-to-end encrypted</p>
+            <p matLine class="date">{{today | date}}</p>
+            <div matLine *ngFor="let msg of sentMsgs" class="msg" #msg>
+                <div *ngIf = "msg.indexOf('1')==0" style="margin-left: auto;">
+                    
+                    {{msg | slice:1:-8}} <sub>{{msg | slice:-8}}</sub>
+                </div>
+                <div *ngIf = "msg.indexOf('2')==0">
+                    {{msg | slice:1:-8}} <sub>{{msg | slice:-8}}</sub>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-footer>
+            <input #msg matInput type="text" (keyup.enter)="send($event)" placeholder="Type your message. . ."
+                [(ngModel)]="inputValue">
+            <button (click)="sendMsg(msg.value)" mat-mini-fab><i class="fa fa-paper-plane"></i></button>
+        </mat-card-footer>
+    </mat-card>
+</div>
+<app-bob (event)="bobMsg($event)"></app-bob>

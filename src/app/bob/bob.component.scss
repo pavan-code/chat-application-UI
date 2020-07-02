@@ -1,0 +1,101 @@
+div#bob {
+  position: absolute;
+  right: 250px;
+  top: 100px;
+  width: 370px;
+}
+div.scrollbar {
+  float: left;
+  height: 450px;
+  width: 10px;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+.scrollbar-default::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.scrollbar-default::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+
+.scrollbar-default::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #2bbbad;
+}
+.container {
+  max-width: 370px;
+  height: 550px;
+  border: 1px solid black;
+  padding: 0px;
+}
+.mat-card-header {
+  background-color: rgb(0, 82, 82);
+  padding: 5px 5px 0 5px;
+}
+h1 {
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
+}
+.mat-card-content p.heading {
+  font-size: 14px;
+  text-align: center;
+  margin: 5px;
+  font-family: cursive;
+  background-color: darkgray;
+  border: 0.5px solid black;
+  border-radius: 10px;
+}
+.mat-card-footer {
+  position: absolute;
+  width: calc(100% - 0px);
+  margin: 0;
+  padding: 5px;
+  bottom: 0px;
+}
+.mat-card-footer input {
+  position: absolute;
+  left: 10px;
+  width: 83%;
+  padding: 5px 5px 5px 10px;
+  margin: 0;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-family: cursive;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+.mat-card-footer button {
+  float: right;
+  outline: none;
+  background-color: rgb(7, 94, 84);
+}
+img {
+  position: relative;
+  border: 1px solid gray;
+  left: 20px;
+}
+
+.messages {
+  height: 82%;
+  margin-bottom: 0;
+  overflow-y: auto;
+  background-color: rgb(236, 229, 221);
+}
+.messages div div {
+  display: table;
+  font-size: 16px;
+  max-width: 300px;
+  font-family: cursive;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px 5px;
+  background-color: blanchedalmond;
+}
